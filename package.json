@@ -1,0 +1,41 @@
+{
+  "name": "exifreader-size-bug",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "optim": "npm rebuild exifreader && rm -rf node_modules/.vite",
+    "build": "vite build --minify false",
+    "reset": "npm un exifreader && rm -rf node_modules/.vite && npm i exifreader"
+  },
+  "exifreader": {
+    "include": {
+      "jpeg": true,
+      "exif": [
+        "DateTime",
+        "GPSLatitude",
+        "GPSLatitudeRef",
+        "GPSLongitude",
+        "GPSLongitudeRef",
+        "GPSAltitude",
+        "GPSAltitudeRef",
+        "Make",
+        "Model",
+        "FNumber",
+        "ImageWidth",
+        "ImageLength",
+        "FocalLength"
+      ]
+    }
+  },
+  "type": "module",
+  "private": true,
+  "keywords": [],
+  "license": "NONE",
+  "description": "",
+  "devDependencies": {
+    "vite": "^5.4.8"
+  },
+  "dependencies": {
+    "exifreader": "^4.23.6"
+  }
+}
